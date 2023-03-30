@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://005v37cuo8i8"]
+
+[ext_resource type="Script" path="res://AbilitySystem/lib/AbilitySystem.gd" id="1_8fmgu"]
+[ext_resource type="Script" path="res://AbilitySystem/lib/AbilityAttribute.gd" id="1_y4gi1"]
+[ext_resource type="Script" path="res://AbilitySystem/lib/AttributeSet.gd" id="2_615a6"]
+[ext_resource type="Script" path="res://AbilitySystem/lib/AbilityAttributeTag.gd" id="3_qxcgn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7n2ki"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qvh80"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t4vg0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_7n2ki")
+
+[node name="BaseMesh" type="Node3D" parent="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/BaseMesh"]
+mesh = SubResource("CapsuleMesh_qvh80")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/BaseMesh/MeshInstance3D"]
+transform = Transform3D(0.89473, 0, 0, 0, 0.358615, 0, 0, 0, 1, 0, 0.482693, -0.411111)
+mesh = SubResource("BoxMesh_t4vg0")
+skeleton = NodePath("../..")
+
+[node name="Node3D" type="Node3D" parent="CharacterBody3D"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/Node3D"]
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D/SpringArm3D"]
+
+[node name="AbilitySystem" type="Node" parent="CharacterBody3D"]
+script = ExtResource("1_8fmgu")
+
+[node name="AttributeSet" type="Node" parent="CharacterBody3D/AbilitySystem"]
+script = ExtResource("2_615a6")
+
+[node name="AttributeTag" type="Node" parent="CharacterBody3D/AbilitySystem/AttributeSet"]
+script = ExtResource("3_qxcgn")
+
+[node name="Attribute" type="Node" parent="CharacterBody3D/AbilitySystem/AttributeSet"]
+script = ExtResource("1_y4gi1")
+
+[node name="Ability1" type="Node" parent="CharacterBody3D/AbilitySystem"]
+
+[node name="Ability2" type="Node" parent="CharacterBody3D/AbilitySystem"]
