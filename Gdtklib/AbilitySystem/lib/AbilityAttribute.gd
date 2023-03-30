@@ -45,7 +45,7 @@ func set_value(val):
 func replication():
 	rpc("remote_replication", base_value)
 
-@rpc("call_local","unreliable")
+@rpc
 func remote_replication(val):
 	base_value = val
 

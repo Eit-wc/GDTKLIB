@@ -24,7 +24,7 @@ func _ready():
 func replicate():
 	rpc("sync_attribute_tag",attribute_tag)
 
-@rpc("unreliable_ordered")
+@rpc
 func sync_attribute_tag(tag:Dictionary):
 	attribute_tag = tag
 

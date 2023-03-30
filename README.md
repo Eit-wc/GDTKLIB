@@ -14,3 +14,14 @@ might use the dialogic
 
 # CharacterGeneratorSystem (TODO)
 use to generate the character
+
+
+TODO:
+- Test AbilitySystem
+- Create basic Character ability
+- Add inventory system
+- Create theme
+- Drag and drop
+- Integrate with AbilitySystem
+- Create basic Character Mesh in blender
+
