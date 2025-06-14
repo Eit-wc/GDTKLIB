@@ -1,7 +1,7 @@
 extends Node
 class_name AbilityAttributeTag
 
-# This class store the dictionary of the ability attribute tag. The tag use by the ability to determine the useability of the ability.
+# Stores ability attribute tags. Abilities check these tags to determine if they are usable.
 @export var attribute_tag:Dictionary = {}
 
 # The replication_rate is the rate of the replication of the ability tag. 
