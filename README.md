@@ -1,19 +1,19 @@
 # GDTKLIB
-The basic toolkit to develop godot game. It including all the tools that I have develop and other add-on to speed up the GameJam.
+A basic toolkit to develop Godot games. It includes all the tools that I have developed and other add-ons to speed up GameJams.
 
 # AbilitySystem
-My framework for develop the multiplayer game. The system seperate the data into the AbilityAttrie and AbilityAttributeTag. It still lag of client-side prediction and server reconciliation.
-- AbilityAttribute contain the float data and control the logic of replication and iteration.
-- AbilityAttributeTag is an dictionary data that can be used by each ability to check that ability is useable. It also use with AnimationTree.
+My framework for developing multiplayer games. The system separates the data into the AbilityAttribute and AbilityAttributeTag. It still lacks client-side prediction and server reconciliation.
+- AbilityAttribute contains the float data and controls the logic of replication and iteration.
+- AbilityAttributeTag is a dictionary that can be used by each ability to check whether that ability is usable. It is also used with AnimationTree.
 
 
 # InventorySystem (TODO)
  
 # DialogSystem (TODO)
-might use the dialogic
+might use Dialogic
 
 # CharacterGeneratorSystem (TODO)
-use to generate the character
+used to generate the character
 
 
 TODO:
