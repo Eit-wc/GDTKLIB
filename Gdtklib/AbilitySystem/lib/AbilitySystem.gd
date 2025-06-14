@@ -7,11 +7,11 @@ var attribute_set: AbilityAttributeSet = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for c in get_children():
-		if c is Ability:
-			ability_list[c.name].append(c)
-		elif c is AbilityAttributeSet:
-			attribute_set = c
+        for c in get_children():
+                if c is Ability:
+                        ability_list[c.name] = c
+                elif c is AbilityAttributeSet:
+                        attribute_set = c
 	pass # Replace with function body.
 
 # ability
