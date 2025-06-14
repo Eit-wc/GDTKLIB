@@ -9,7 +9,7 @@ var attribute_set: AbilityAttributeSet = null
 func _ready():
 	for c in get_children():
 		if c is Ability:
-			ability_list[c.name].append(c)
+			ability_list[c.name] = c
 		elif c is AbilityAttributeSet:
 			attribute_set = c
 	pass # Replace with function body.
